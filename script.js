@@ -365,10 +365,8 @@ photoCards.forEach(
             "click",
             function () {
 
-                const image =
-                    card.getAttribute(
-                        "data-image"
-                    );
+                const imgInside = card.querySelector("img");
+                const image = imgInside ? imgInside.src : card.getAttribute("data-image");
 
                 if (!image) return;
 
